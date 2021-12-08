@@ -22,21 +22,21 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="z6d-mL-9lO">
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="442"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9n-ZE-zd2" userLabel="redView">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9n-ZE-zd2" userLabel="redView">
                                                 <rect key="frame" x="0.0" y="0.0" width="124" height="124"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="H9n-ZE-zd2" secondAttribute="height" multiplier="1:1" id="94W-sR-Saa"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sl7-c5-ZgI" userLabel="yellowView">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sl7-c5-ZgI" userLabel="yellowView">
                                                 <rect key="frame" x="0.0" y="159" width="124" height="124"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="sl7-c5-ZgI" secondAttribute="height" multiplier="1:1" id="1Yg-w6-3mY"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80N-Ns-Faa" userLabel="greenView">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80N-Ns-Faa" userLabel="greenView">
                                                 <rect key="frame" x="0.0" y="318" width="124" height="124"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <constraints>
@@ -54,6 +54,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="startPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="AdC-Y9-K8w"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -67,10 +70,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h44-lm-cq4" secondAttribute="bottom" constant="313" id="vAz-hv-whX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="80N-Ns-Faa" id="ymT-n0-9Qe"/>
+                        <outlet property="redView" destination="H9n-ZE-zd2" id="UQc-Rx-tjy"/>
+                        <outlet property="startButton" destination="FTf-Uw-I1p" id="EK4-r3-ONc"/>
+                        <outlet property="yellowView" destination="sl7-c5-ZgI" id="mS0-5F-vFl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="55.580357142857139"/>
+            <point key="canvasLocation" x="148" y="57"/>
         </scene>
     </scenes>
     <resources>
