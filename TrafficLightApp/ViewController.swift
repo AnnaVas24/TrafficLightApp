@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var greenView: UIView!
     @IBOutlet var startButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         startButton.layer.cornerRadius = 10
@@ -27,11 +28,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func startPressed() {
-        
+        self.changeLight()
+        startButton.setTitle("NEXT", for: .normal)    }
+
+    func changeLight() {
         if redView.alpha == 0.3 {
             redView.alpha = 1
-            startButton.setTitle("NEXT", for: .normal)
         }
+        
         if redView.alpha == 1 {
             redView.alpha = 0.3
             yellowView.alpha = 1
@@ -45,6 +49,5 @@ class ViewController: UIViewController {
             redView.alpha = 1
         }
     }
-    
 }
 
